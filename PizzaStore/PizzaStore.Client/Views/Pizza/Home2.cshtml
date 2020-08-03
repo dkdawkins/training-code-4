@@ -1,0 +1,15 @@
+@* strong-typed view *@
+
+@model IEnumerable<PizzaStore.Domain.Models.PizzaModel>;  //Would normally use ViewModel!
+
+@{
+  Layout = "_Layout";
+}
+
+<h2>Pizza List</h2>
+<ul>
+  @foreach (var p in @Model)
+  {
+    <li>@p</li>
+  }
+</ul>
