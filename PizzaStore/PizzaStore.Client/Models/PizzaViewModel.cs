@@ -16,28 +16,28 @@ namespace PizzaStore.Client.Models
     {
       Crusts = new List<CrustModel>
       {
-        new CrustModel(){Id = 1, Name = "thin"},
-        new CrustModel(){Id = 2, Name = "stuffed"}
+        new CrustModel(){Name = "thin"},
+        new CrustModel(){Name = "stuffed"}
       };
       Sizes = new List<SizeModel>
       {
-        new SizeModel(){Id = 1, Name = "small"},
-        new SizeModel(){Id = 2, Name = "large"}
+        new SizeModel(){Name = "small"},
+        new SizeModel(){Name = "large"}
       };
       Toppings = new List<ToppingModel>
       {
-        new ToppingModel(){Id = 1, Name = "pepperoni"},
-        new ToppingModel(){Id = 2, Name = "sausage"}
+        new ToppingModel(){Name = "pepperoni"},
+        new ToppingModel(){Name = "sausage"}
       };
     }
 
     //Used for storing
+    [Required(ErrorMessage = "Better select Crust")]
+    public string Crust { get; set; }
     [Required]
-    public CrustModel Crust { get; set; }
-    [Required]
-    public SizeModel Size { get; set; }
+    public string Size { get; set; }
     [Range(2,5)]
-    public List<ToppingModel> SelectedToppings { get; set; }
+    public List<string> SelectedToppings { get; set; }
     public bool SelectedTopping { get; set; }
   }
 }
