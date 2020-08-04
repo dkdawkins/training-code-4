@@ -5,4 +5,4 @@ obj/
 # node
 node_modules/
 
-appsettings.*.json
+appsettings.*.json/
